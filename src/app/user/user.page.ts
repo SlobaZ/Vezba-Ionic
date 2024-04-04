@@ -93,7 +93,7 @@ export class UserPage implements OnInit {
    });
   }
 
-    handleChange(event?:any) {
+  handleChange(event?:any) {
     // this.country = event.detail.value;
     this.country = event.target.value;
     console.log(this.country);

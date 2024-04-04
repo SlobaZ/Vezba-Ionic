@@ -17,6 +17,12 @@
 
   <div id="container">
 
+    <ion-searchbar *ngIf="showInput"  (ionInput)="handleInput($event)"></ion-searchbar>
+
+    <ion-item *ngIf="showSpiner">
+      <ion-spinner></ion-spinner>
+    </ion-item>
+
 
     <ion-card *ngFor="let apidata of apidatas" (ngModelChange)="onScrollLoad()">    
       <ion-card-header>

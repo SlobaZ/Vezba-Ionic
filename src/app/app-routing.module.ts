@@ -18,17 +18,17 @@ const routes: Routes = [
     loadChildren: () => import('./filters-find-sort/filters-find-sort.module').then( m => m.FiltersFindSortPageModule)
   },
   {
-    path: 'apidata',
+    path: 'apidata/:id',
     loadChildren: () => import('./apidata/apidata.module').then( m => m.ApidataPageModule)
   },
   {
     path: 'apidataview/:id',
     loadChildren: () => import('./apidataview/apidataview.module').then( m => m.ApidataviewPageModule)
   },
-  {
-    path: 'category/:id',
-    loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
-  },  
+  // {
+  //   path: 'category/:id',
+  //   loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
+  // },  
   {
     path: 'users',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
@@ -37,10 +37,10 @@ const routes: Routes = [
     path: 'userview/:id',
     loadChildren: () => import('./userview/userview.module').then( m => m.UserviewPageModule)
   },
-  {
-    path: 'userview-apidata/:id',
-    loadChildren: () => import('./userview-apidata/userview-apidata.module').then( m => m.UserviewApidataPageModule)
-  },
+  // {
+  //   path: 'userview-apidata/:id',
+  //   loadChildren: () => import('./userview-apidata/userview-apidata.module').then( m => m.UserviewApidataPageModule)
+  // },
   { 
     path: '**', pathMatch: 'full',  
     loadChildren: () => import('./pagenotfound/pagenotfound.module').then( m => m.PagenotfoundPageModule)

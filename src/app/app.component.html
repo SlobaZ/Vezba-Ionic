@@ -23,7 +23,7 @@
               <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
               <ion-label>Filters-Find-Sort Page</ion-label>
             </ion-item>
-            <ion-item [routerLink]="['apidata']" lines="none" detail="false"> 
+            <ion-item [routerLink]="['apidata/all']" lines="none" detail="false"> 
               <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
               <ion-label>Api</ion-label>
             </ion-item>
@@ -36,9 +36,9 @@
 
         </ion-list>
 
-        <ion-button (click)="getAlls()"> Categories </ion-button>
+        <ion-button color="medium" (click)="getAlls()"> Categories </ion-button>
         <ion-menu-toggle auto-hide="false" *ngFor="let c of categories; let i = index">
-          <ion-item  [routerLink]="['category/'+c]" lines="none" detail="false">
+          <ion-item  [routerLink]="['apidata/'+c]" lines="none" detail="false">
             <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
             <ion-label>{{ c }}</ion-label>
           </ion-item>
@@ -48,10 +48,6 @@
       </ion-content>
     </ion-menu>
 
-
-
-
-<!-- -->
 
 
     <ion-router-outlet id="main-content"> </ion-router-outlet>
