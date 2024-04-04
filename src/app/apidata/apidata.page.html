@@ -20,7 +20,7 @@
     <ion-searchbar *ngIf="showInput"  (ionInput)="handleInput($event)"></ion-searchbar>
 
     <ion-item *ngIf="showSpiner">
-      <ion-spinner></ion-spinner>
+      <ion-spinner name="circles"></ion-spinner>
     </ion-item>
 
 
@@ -35,7 +35,7 @@
 
         <ion-list>
             <ion-item><ion-label>{{ apidata.content_text?.substring(0,100) }} ...</ion-label></ion-item>
-            <ion-item><ion-label>{{ apidata.user_id }}   <ion-button [routerLink]="['/userview/' + apidata.user_id]"> Select </ion-button></ion-label></ion-item>
+            <ion-item><ion-label>{{ apidata.user_id }}  <ion-button [routerLink]="['/userview/' + apidata.user_id]"> Select </ion-button></ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.title }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.created_at }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.id }}</ion-label></ion-item>

@@ -39,6 +39,7 @@ export class ApidataPage implements OnInit {
 
 
   user: User = new User();
+  first_name?: string;
 
   offset = 0;
 
@@ -63,7 +64,7 @@ export class ApidataPage implements OnInit {
           this.getAll();
         }
         else if(typeof this.id === "string"){
-          this.GetAllByCategory();
+          this.getAllByCategory();
         }
 
   }
@@ -90,7 +91,7 @@ export class ApidataPage implements OnInit {
 
   }
 
-  /* INFINITE SCROLL  */
+  /*  INFINITE SCROLL  */
   onIonInfinite(ev?:any) {
       if(this.id === "all"){
           this.offset = this.offset+5;
@@ -114,7 +115,7 @@ export class ApidataPage implements OnInit {
   }
 
 
-  /* INPUT */
+  /*  INPUT AND SEARCH  */
   async handleInput(event:any) {
       this.searchValue = event.target.value;  
       this.apidatas = [];
@@ -143,9 +144,9 @@ export class ApidataPage implements OnInit {
   }
 
 
-  /* CATEGORY  */
+  /*  CATEGORY   */
 
- async GetAllByCategory () {
+ async getAllByCategory () {
     await this.loadApiDatas();
     this.apidatas = this.apidatasList.filter(c=>c.category===this.id)
     this.showInput = true;
@@ -156,8 +157,7 @@ export class ApidataPage implements OnInit {
 
 
 
-
-/* USERS BY ID APIDATAS  */
+/*  USERS BY ID APIDATAS  */
 
 async getFilteredDataByUserID(){
       await this.loadApiDatas();
@@ -168,7 +168,6 @@ async getFilteredDataByUserID(){
       this.apidatas = this.apidatasList.filter( x=> x.user_id === this.id);
 return this.apidatas;
 }
-
 
 
 
@@ -185,6 +184,8 @@ loadApiDatas(){
         }
   });
 }
+
+
 
 
 

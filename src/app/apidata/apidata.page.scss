@@ -8,14 +8,20 @@ ion-menu-button {
 }
 
 ion-card {
-  box-shadow: 1px 0 lightgray, 0 1px lightgray, -1px 0 lightgray, 0 -1px lightgray,
-              2px 0 gray, 0 2px gray, -2px 0 gray, 0 -2px gray;
-  border-radius: 20px;
+  box-shadow: 1px 0 lightgray, 0 1px lightgray, -1px 0 lightgray, 0 -1px lightgray;
+              border-top-left-radius: 80px 70px;
+              border-top-right-radius: 80px 70px;
 }
 
-ion-card-header img {
-  border-top-left-radius: 100px 70px;
-  border-top-right-radius: 100px 70px;
+ion-card-header {
+  margin:0;
+  padding: 0;
+}
+
+ion-spinner {
+  margin:0 auto;
+  width: 80px;
+  height: 80px;
 }
 
 

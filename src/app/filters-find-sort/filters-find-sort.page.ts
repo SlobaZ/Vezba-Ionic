@@ -13,7 +13,7 @@ export class FiltersFindSortPage implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
 
 
-  isLoadApidatasList = false;
+  isLoadApidatasList = false; 
 
   apidatas?: Apidata[] = [];
 
@@ -38,9 +38,7 @@ export class FiltersFindSortPage implements OnInit {
   private getAll(){
     try {
           this.apidataService.getAll().subscribe(data => {
-                data.blogs.map((item:any) => {
                       this.apidatasList = data.blogs;
-                }) 
               console.log(this.apidatasList);
               this.isLoadApidatasList = true;
           });
