@@ -17,3 +17,12 @@ ion-card ion-list {
 ion-card ion-list ion-item {
   width:100%;
 }
+
+ion-select, ion-select-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
