@@ -1,0 +1,19 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card ion-list {
+  width:100%;
+}
+
+
+ion-card ion-list ion-item {
+  width:100%;
+}

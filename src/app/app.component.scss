@@ -117,3 +117,17 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+ion-content p {
+  color:red;
+}
+
+ion-content ion-button {
+  color:red;
+  font-weight: bold;
+}
+
+ion-card ion-card-header ion-card-subtitle {
+  color:red;
+  font-weight: bold;
+}
