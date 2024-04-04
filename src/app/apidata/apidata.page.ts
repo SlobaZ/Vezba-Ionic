@@ -53,7 +53,7 @@ export class ApidataPage implements OnInit {
         this.startApiData();
   }
 
-  private startApiData(){
+  private startApiData(){ 
         this.id = this.activatedRoute.snapshot.paramMap.get('id') as any;
         console.log('*** ' + this.id);
         if(!isNaN(this.id)){
