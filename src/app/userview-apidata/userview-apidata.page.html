@@ -29,7 +29,7 @@
 
         <ion-list>
             <ion-item><ion-label>{{ apidata.content_text?.substring(0,100) }} ...</ion-label></ion-item>
-            <ion-item><ion-label>{{ apidata.user_id }}   <ion-button [routerLink]="['/userview/' + apidata.user_id]"> Select </ion-button></ion-label></ion-item>
+            <ion-item><ion-label>{{ apidata.user_id }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.title }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.created_at }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.id }}</ion-label></ion-item>
@@ -37,7 +37,6 @@
             <ion-item><ion-label>{{ apidata.content_html?.substring(0,100) }} ... </ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.category }}</ion-label></ion-item>
             <ion-item><ion-label>{{ apidata.updated_at }}</ion-label></ion-item>
-            <ion-button [routerLink]="['/apidataview/' + apidata.id]"> Select </ion-button>
       </ion-list>
 
       </ion-card-content>
