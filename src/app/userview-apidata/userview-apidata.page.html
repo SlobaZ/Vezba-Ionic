@@ -44,25 +44,22 @@
     
     </ion-card>
 
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button [routerLink]="['/userview/'+id]">  
-          <ion-icon name="person-outline"></ion-icon>
-          User
-        </ion-tab-button>
-        <ion-tab-button>
-          <ion-icon name="library"></ion-icon>
-          Blogs
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
 
+  <div class="empty"></div>
 
-
-    <br>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/userview/'+id]">  
+        <ion-icon name="person-outline"></ion-icon>
+        User
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="library"></ion-icon>
+        Blogs
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 
   </div>
-
-
 
 </ion-content>
