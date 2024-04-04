@@ -1,0 +1,7 @@
+{
+  "name": "Vezba-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
