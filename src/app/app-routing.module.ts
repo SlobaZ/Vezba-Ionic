@@ -24,11 +24,7 @@ const routes: Routes = [
   {
     path: 'apidataview/:id',
     loadChildren: () => import('./apidataview/apidataview.module').then( m => m.ApidataviewPageModule)
-  },
-  // {
-  //   path: 'category/:id',
-  //   loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
-  // },  
+  }, 
   {
     path: 'users',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
@@ -37,10 +33,6 @@ const routes: Routes = [
     path: 'userview/:id',
     loadChildren: () => import('./userview/userview.module').then( m => m.UserviewPageModule)
   },
-  // {
-  //   path: 'userview-apidata/:id',
-  //   loadChildren: () => import('./userview-apidata/userview-apidata.module').then( m => m.UserviewApidataPageModule)
-  // },
   { 
     path: '**', pathMatch: 'full',  
     loadChildren: () => import('./pagenotfound/pagenotfound.module').then( m => m.PagenotfoundPageModule)
