@@ -23,7 +23,7 @@ export class UserService {
   }
 
   getAllList(): Observable<any>{
-    return this.httpClient.get<User[]>(`${this.baseURL}?limit=20`);  
+    return this.httpClient.get<User[]>(`${this.baseURL}?limit=100`);  
   }
 
 

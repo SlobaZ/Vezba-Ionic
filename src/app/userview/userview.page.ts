@@ -26,10 +26,10 @@ export class UserviewPage implements OnInit {
     try {
       this.id = this.activatedRoute.snapshot.paramMap.get('id') as string;    /* this.route.snapshot.params['id']; */
       console.log(this.route.snapshot.params['id']);
-            this.userService.getApiById(this.id).subscribe(data => {
+      this.userService.getApiById(this.id).subscribe(data => {
               this.user = data.user;
               console.log(this.user);
-            });   
+      });   
     }
     catch (error) {
         console.log(error);
